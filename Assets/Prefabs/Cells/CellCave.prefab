@@ -28,7 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3978870254825791577}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -185,9 +185,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3978870254825791577}
   - component: {fileID: 6693407458654794776}
-  - component: {fileID: 5029999089846193024}
-  - component: {fileID: 2569298269213951916}
-  - component: {fileID: 8561607273919839013}
+  - component: {fileID: 7701179256930204177}
+  - component: {fileID: 2975527233371672214}
+  - component: {fileID: 2177789981542375255}
   m_Layer: 0
   m_Name: CellCave
   m_TagString: Untagged
@@ -203,14 +203,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.21}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9000412919303337721}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &6693407458654794776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,15 +225,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellType: 3
   idLabel: {fileID: 2639938874409433834}
---- !u!33 &5029999089846193024
+--- !u!33 &7701179256930204177
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2569298269213951916
+  m_Mesh: {fileID: 4300006, guid: 153bc44f053d8ae4aa2b1f8d546e91d6, type: 3}
+--- !u!23 &2975527233371672214
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,7 +277,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8561607273919839013
+--- !u!65 &2177789981542375255
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,5 +296,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3.1665556, y: 3.1665556, z: 3.1665556}
   m_Center: {x: 0, y: 0, z: 0}

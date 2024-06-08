@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3978870254825791577}
   - component: {fileID: 6847000786991524740}
-  - component: {fileID: 5029999089846193024}
-  - component: {fileID: 2569298269213951916}
-  - component: {fileID: 8561607273919839013}
+  - component: {fileID: 7782543872155796447}
+  - component: {fileID: 3287201136815265848}
+  - component: {fileID: 7274725212115439859}
   m_Layer: 0
   m_Name: CellTrap
   m_TagString: Untagged
@@ -28,14 +28,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.21}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4794681643530306963}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &6847000786991524740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,15 +50,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellType: 2
   idLabel: {fileID: 1931815796715522432}
---- !u!33 &5029999089846193024
+--- !u!33 &7782543872155796447
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2569298269213951916
+  m_Mesh: {fileID: 4300006, guid: 153bc44f053d8ae4aa2b1f8d546e91d6, type: 3}
+--- !u!23 &3287201136815265848
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,7 +102,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8561607273919839013
+--- !u!65 &7274725212115439859
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3.1665556, y: 3.1665556, z: 3.1665556}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9062152270897153209
 GameObject:
@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4794681643530306963
 RectTransform:
   m_ObjectHideFlags: 0

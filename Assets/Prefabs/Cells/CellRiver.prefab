@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2964536924955491062
 RectTransform:
   m_ObjectHideFlags: 0
@@ -185,9 +185,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3978870254825791577}
   - component: {fileID: 6016408040716585184}
-  - component: {fileID: 5029999089846193024}
-  - component: {fileID: 2569298269213951916}
-  - component: {fileID: 8561607273919839013}
+  - component: {fileID: 7388148719348368530}
+  - component: {fileID: 161146966900484673}
+  - component: {fileID: 6895696685625511977}
   m_Layer: 0
   m_Name: CellRiver
   m_TagString: Untagged
@@ -203,14 +203,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.21}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2964536924955491062}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &6016408040716585184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,15 +225,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellType: 1
   idLabel: {fileID: 8169871767402346213}
---- !u!33 &5029999089846193024
+--- !u!33 &7388148719348368530
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6177901731362147833}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2569298269213951916
+  m_Mesh: {fileID: 4300006, guid: 153bc44f053d8ae4aa2b1f8d546e91d6, type: 3}
+--- !u!23 &161146966900484673
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,7 +255,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e25e5feada6464eddb121bad23f637ca, type: 2}
+  - {fileID: 2100000, guid: 8d3bf20d9e62f424ba7828f6e852d6cc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -277,7 +277,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8561607273919839013
+--- !u!65 &6895696685625511977
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,5 +296,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13.7, y: 13.7, z: 1.7}
+  m_Center: {x: 0, y: 0, z: -0.011703253}

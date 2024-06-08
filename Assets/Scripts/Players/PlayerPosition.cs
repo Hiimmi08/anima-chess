@@ -2,7 +2,7 @@
 {
     public enum PlayerPosition
     {
-        North = 0,
-        South = 1,
+        South = 0,
+        North = 1,
     }
 }
