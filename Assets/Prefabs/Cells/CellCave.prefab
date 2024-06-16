@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 6693407458654794776}
   - component: {fileID: 7701179256930204177}
   - component: {fileID: 2975527233371672214}
-  - component: {fileID: 2177789981542375255}
+  - component: {fileID: 384031820562702974}
   m_Layer: 0
   m_Name: CellCave
   m_TagString: Untagged
@@ -277,7 +277,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2177789981542375255
+--- !u!65 &384031820562702974
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -296,5 +296,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.1665556, y: 3.1665556, z: 3.1665556}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13.60867, y: 14, z: 1.7888081}
+  m_Center: {x: 0, y: 5.559612e-17, z: -0.011703256}

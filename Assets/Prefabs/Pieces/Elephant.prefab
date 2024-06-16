@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseRank: 8
   animationController: {fileID: -8392627400014795111}
-  physics: {fileID: 6203265520010122317}
 --- !u!114 &-8392627400014795111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2910515581111630687, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2910515581274994847, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -137,10 +140,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2910515581111630684, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6203265520010122317}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
 --- !u!95 &1642166933400340241 stripped
 Animator:
@@ -152,23 +152,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2910515580920360331, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
   m_PrefabInstance: {fileID: 4516578950630801742}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1642166933769878034 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2910515581111630684, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}
-  m_PrefabInstance: {fileID: 4516578950630801742}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6203265520010122317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642166933769878034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c13ecc48f17d4ab0afcf7c9db2bef7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1642166933769878035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2910515581111630685, guid: f2471e07d670c5e4694db663baa1eb2b, type: 3}

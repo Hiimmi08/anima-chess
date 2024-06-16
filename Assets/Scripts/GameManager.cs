@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
 
     private void AddEvents()
     {
-        Piece.OnClickHandler += OnClickPiece;
         Cell.OnClickHandler += OnClickCell;
 
         pieceManager.PieceActionCompleteHandler += OnPieceActionComplete;
@@ -25,26 +24,25 @@ public class GameManager : MonoBehaviour
 
     private void RemoveEvents()
     {
-        Piece.OnClickHandler -= OnClickPiece;
         Cell.OnClickHandler -= OnClickCell;
 
         pieceManager.PieceActionCompleteHandler -= OnPieceActionComplete;
     }
 
-    private void OnClickPiece(Piece piece)
+    private void OnClickCell(Cell cell)
     {
-        if (piece.PlayerId != currentPlayer.Id)
+        if (cell == null)
         {
-            Debug.LogError("This piece is not playable in this turn!");
             return;
         }
 
-        pieceManager.OnClickPieceHandler(piece);
-    }
-
-    private void OnClickCell(Cell cell)
-    {
-        // Not yet needed
+        Debug.Log($"Click Cell: {cell.name}");
+        // Check if cell has any piece on it
+        if (cell.Piece != null)
+        {
+            Debug.Log($"Move Piece: {cell.name}");
+            pieceManager.OnMovePiece(cell);
+        }
     }
 
     private void OnPieceActionComplete(Piece piece)

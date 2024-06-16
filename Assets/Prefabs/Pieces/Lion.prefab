@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseRank: 7
   animationController: {fileID: -3581591042668332417}
-  physics: {fileID: 4917895379147015252}
 --- !u!114 &-3581591042668332417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4801854042067335957, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4801854042104855546, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -137,10 +140,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4801854042067335954, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4917895379147015252}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
 --- !u!95 &6940166516992616489 stripped
 Animator:
@@ -167,20 +167,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4801854042067335955, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
   m_PrefabInstance: {fileID: 2518620921044111325}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6940166517975807183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4801854042067335954, guid: cad4a361a8b7b7f4c8d0108f65f55717, type: 3}
-  m_PrefabInstance: {fileID: 2518620921044111325}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4917895379147015252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6940166517975807183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c13ecc48f17d4ab0afcf7c9db2bef7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

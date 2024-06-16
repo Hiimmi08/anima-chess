@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseRank: 5
   animationController: {fileID: -2294734896247854074}
-  physics: {fileID: 7901914506606450728}
 --- !u!114 &-2294734896247854074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +76,10 @@ PrefabInstance:
     - target: {fileID: 7301065166965055437, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
       propertyPath: m_Name
       value: Cheetah
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301065166965055440, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7301065166965055442, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -137,33 +140,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7301065166965055437, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7901914506606450728}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
 --- !u!4 &8822854162579140104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7301065166965055442, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
   m_PrefabInstance: {fileID: 2243789921531015642}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8822854162579140119 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7301065166965055437, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}
-  m_PrefabInstance: {fileID: 2243789921531015642}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7901914506606450728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8822854162579140119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c13ecc48f17d4ab0afcf7c9db2bef7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &8822854163498488865 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7301065167906956795, guid: e57f0172d2a349d4894cfebf5c716d90, type: 3}

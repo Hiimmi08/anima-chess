@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6847000786991524740}
   - component: {fileID: 7782543872155796447}
   - component: {fileID: 3287201136815265848}
-  - component: {fileID: 7274725212115439859}
+  - component: {fileID: 5491408770504903922}
   m_Layer: 0
   m_Name: CellTrap
   m_TagString: Untagged
@@ -102,7 +102,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7274725212115439859
+--- !u!65 &5491408770504903922
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,8 +121,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.1665556, y: 3.1665556, z: 3.1665556}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 13.60867, y: 14, z: 1.7888081}
+  m_Center: {x: 0, y: 5.559612e-17, z: -0.011703256}
 --- !u!1 &9062152270897153209
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ namespace Pieces
     {
         public static PieceManager Instance;
 
-        public event Action<int, bool, bool> PieceClickedHandler;
+        public event Action<int, bool, bool> CellHighlightHandler;
         public event Action<Piece> PieceActionCompleteHandler;
 
         [Header("Piece Prefabs")]
@@ -145,7 +145,8 @@ namespace Pieces
             var position = cell.Position + new Vector3(0f, SpawnY, 0f);
             var p = Instantiate(piece, position, Quaternion.identity);
             p.transform.SetParent(transform);
-            p.Init(cellId, direction, playerId);
+            p.Init(direction, playerId);
+            cell.SetPiece(p);
 
             return p;
         }
@@ -170,23 +171,26 @@ namespace Pieces
             Cell.OnClickHandler -= OnClickCell;
         }
 
-        public void OnClickPieceHandler(Piece piece)
+        public void OnMovePiece(Cell cell)
         {
-            if (piece == null)
+            if (cell == null || cell.Piece == null)
             {
+                Debug.Log($"OnMovePiece: {cell.name} 1");
                 return;
             }
 
+            var piece = cell.Piece;
             if (_selectedPiece != null && _selectedPiece != piece)
             {
+                Debug.Log($"OnMovePiece: {cell.name} 2");
                 _selectedPiece.ResetOnClick();
             }
 
+            Debug.Log($"OnMovePiece: {cell.name} 3");
             _selectedPiece = piece;
             piece.SetOnClick();
-            var cellId = piece.CurrentCell;
             var rank = piece.CurrentRank;
-            PieceClickedHandler?.Invoke(cellId, IsSwimmable(rank), IsCrossable(rank));
+            CellHighlightHandler?.Invoke(cell.Id, IsSwimmable(rank), IsCrossable(rank));
         }
 
         private void OnClickCell(Cell cell)
@@ -205,21 +209,6 @@ namespace Pieces
         private bool IsSwimmable(Rank rank) => rank is Rank.Rat or Rank.Dog;
         private bool IsCrossable(Rank rank) => rank is Rank.Lion or Rank.Tiger;
 
-        public void MoveForward(Piece piece)
-        {
-            var currentCell = piece.CurrentCell;
-            int destinationId = piece.Direction switch
-            {
-                PieceDirection.North => currentCell - 1,
-                PieceDirection.South => currentCell + 1,
-                _ => currentCell
-            };
-
-            var destination = Board.Instance.GetCell(destinationId);
-            Debug.Log($"piece={piece.CurrentRank}, cur={currentCell}, des={destination.Id}");
-            piece.MoveToCell(destination, SpawnY);
-        }
-
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -229,15 +218,6 @@ namespace Pieces
             else
             {
                 Instance = this;
-            }
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                MoveForward(_southPieces[0]);
-                MoveForward(_northPieces[0]);
             }
         }
 

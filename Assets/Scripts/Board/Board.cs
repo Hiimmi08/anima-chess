@@ -70,13 +70,13 @@ namespace Boards
         private void AddEvent()
         {
             Cell.OnClickHandler += OnClickCell;
-            PieceManager.Instance.PieceClickedHandler += OnClickPiece;
+            PieceManager.Instance.CellHighlightHandler += OnPieceHighlight;
         }
 
         private void RemoveEvent()
         {
             Cell.OnClickHandler -= OnClickCell;
-            PieceManager.Instance.PieceClickedHandler -= OnClickPiece;
+            PieceManager.Instance.CellHighlightHandler -= OnPieceHighlight;
         }
 
         private void Awake()
@@ -101,9 +101,9 @@ namespace Boards
             // TODO: Implement to reset highlight cells after piece finishes moving
         }
 
-        private void OnClickPiece(int pieceCellId, bool isSwimmable, bool isCrossable)
+        private void OnPieceHighlight(int cellId, bool isSwimmable, bool isCrossable)
         {
-            if (pieceCellId < 0 || pieceCellId >= cellList.Count)
+            if (cellId < 0 || cellId >= cellList.Count)
             {
                 Debug.LogError($"Piece's cell ID is invalid.");
                 return;
@@ -115,10 +115,10 @@ namespace Boards
                 cell.ResetHighlight();
             }
 
-            var cellSouth = GetCell(pieceCellId - 1);
-            var cellWest = GetCell(pieceCellId - 9);
-            var cellNorth = GetCell(pieceCellId + 1);
-            var cellEast = GetCell(pieceCellId + 9);
+            var cellSouth = GetCell(cellId - 1);
+            var cellWest = GetCell(cellId - 9);
+            var cellNorth = GetCell(cellId + 1);
+            var cellEast = GetCell(cellId + 9);
 
             if (isSwimmable)
             {
@@ -133,9 +133,9 @@ namespace Boards
             if (isCrossable)
             {
                 // Check if cell is special case
-                if (_crossableCells.ContainsKey(pieceCellId))
+                if (_crossableCells.ContainsKey(cellId))
                 {
-                    var neighbors = _crossableCells[pieceCellId];
+                    var neighbors = _crossableCells[cellId];
                     HighlightCell(GetCell(neighbors.South));
                     HighlightCell(GetCell(neighbors.North));
                     HighlightCell(GetCell(neighbors.West));
